@@ -1,0 +1,39 @@
+info:
+  component: Visual Api
+  project:
+      name: visual-api
+      version: 0.0.1-SNAPSHOT
+
+server:
+  port: 8068
+  context-path: /visual-api
+  tomcat:
+    basedir: /tmp/tomcat
+
+management:
+  security:
+    enabled: false
+
+spring:
+  application:
+    name: visual-api
+
+  jackson:
+    default-property-inclusion: non_null
+
+  jpa:
+    show-sql: true
+    format-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+
+    tomcat:
+      max-wait: 60000
+      initial-size: 10
+      max-active: 150
+      test-on-borrow: true
