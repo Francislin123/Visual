@@ -5,7 +5,7 @@ import com.visual.app.api.core.repository.autor.model.AutorEntity;
 import java.util.List;
 
 /**
- * Created by Francislin Dos Reis on 12/12/17.
+ * Created by Francislin Dos Reis on 19/07/18.
  */
 
 public interface AutorService {

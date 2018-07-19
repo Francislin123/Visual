@@ -1,0 +1,9 @@
+com.visual.app.api
+com.visual.app.api.core.exceptions
+com.visual.app.api.core.repository.autor
+com.visual.app.api.core.repository.autor.model
+com.visual.app.api.core.service.autor
+com.visual.app.api.resources.autor
+com.visual.app.api.resources.autor.request
+com.visual.app.api.resources.autor.response
+com.visual.app.api.resources.response
