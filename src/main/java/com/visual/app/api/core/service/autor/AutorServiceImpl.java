@@ -26,6 +26,7 @@ public class AutorServiceImpl implements AutorService {
     public void saveAutor(AutorEntity autorEntity) {
 
         hasConflictName(autorEntity.getNome());
+
         persistAutor(autorEntity);
     }
 
@@ -41,7 +42,8 @@ public class AutorServiceImpl implements AutorService {
     @Override
     public AutorEntity findAutorEntityByNome(String nome) {
         Optional<AutorEntity> autorEntity = autorRepository.findByNome(nome);
-        return autorEntity.orElseThrow(() -> new EntityNotFoundException(String.format("Autor not found for nome='%s'", nome)));
+        return autorEntity.orElseThrow(() -> new
+                EntityNotFoundException(String.format("Autor not found for nome='%s'", nome)));
     }
 
     @Override
@@ -65,7 +67,8 @@ public class AutorServiceImpl implements AutorService {
     }
 
     private AutorEntity findById(Long id) {
-        return autorRepository.findById(id).orElseThrow(() -> new EntityNotFoundException(String.format("Autor not found for id='%s'", id)));
+        return autorRepository.findById(id).orElseThrow(() -> new
+                EntityNotFoundException(String.format("Autor not found for id='%s'", id)));
     }
 
     private void hasConflictName(String nome) {
